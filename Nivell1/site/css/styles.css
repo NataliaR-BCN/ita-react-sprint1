@@ -113,3 +113,24 @@ main {
 aside :first-child {   
     margin-bottom: 10px;
 }
+
+/* *** ADAPTACIÓ ALTRES PANTALLES --- MEDIA QUERIES *** */
+
+/* Nivell 1 - Exercici 2 => Versió tablet (portrait): */
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+
+    .negre-groc {
+        background-color: #FEFF03;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+}

@@ -134,3 +134,54 @@ aside :first-child {
     }
 
 }
+
+/* Nivell 1 - Exercici 3 => Versió mobile: */
+@media only screen and (max-width: 600px) {
+    .violeta {
+        background-color: #09506F;
+    }
+
+    .negre-groc {
+        background-color: #FEE228
+    }
+    
+    .blau {
+        background-color: #62959C;
+    }
+    
+    .blau-clar {
+        background-color: #A3DDCB;
+    }
+    
+    .magenta {
+        background-color: #FD7B54;
+    }
+    
+    .groc-clar {
+        background-color: #FDB36B;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    section {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+   
+    .articles-row {
+        gap: 0;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .articles-row {
+        flex-direction: column;
+    }
+
+}

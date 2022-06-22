@@ -15,6 +15,7 @@ html {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
 }
     
 *, *:before, *:after { 
@@ -24,6 +25,7 @@ html {
 body {
     margin: 0;
     padding: 0;    
+    overflow-x: hidden;
 }
 
 .contenidor {
@@ -170,6 +172,10 @@ h1 {
     padding-top: 0.3em;
 }
 
+h1 {
+animation: entradaTitol 2s ease-in-out 3s both;
+}
+
 /* --- Main & footer --- */
 
 /* Nivell 2 - Exercici 5 => Grafisme articles: */  
@@ -254,6 +260,159 @@ h2 {
     padding: 1px 0;
 }
 
+
+
+/* -------------- Nivell 3 - Exercici 6 => Animació: -------------- */
+/* Aquí hi ha els @keyframes, les animacions es criden en cada regla CSS */
+
+@keyframes entradaLogo {
+    0% {
+        opacity: 0;
+        top: -120px;
+        left: 10px;
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.8, 1.8);
+        top: 0px;
+        left: 35px;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes entradaMenu {
+    0% {
+        opacity: 0;
+        margin-top: -120px;
+    }
+
+    50% {
+        opacity: 0.7;
+        margin-top: 0px;
+    }
+
+    75% {
+        opacity: 0.8;
+        margin-top: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes entradaXs {
+    0% {
+        opacity: 0;
+        transform: translateX(125px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes entradaTitol {
+    0% {
+        opacity: 0;
+        transform: scale(2, 2);
+        color: var(--gris-fosc);
+    }
+
+    50% {
+        opacity: 0.8;
+        color: var(--gris-fosc);
+    }
+
+    75% {
+        transform: scale(0.6, 0.6);
+        color: rgba(var(--taronja));
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+
+}
+
+@keyframes entradaEntradetes {
+    0% {
+        opacity: 0;
+        transform: translateX(225px);
+    }
+
+    75% {
+        transform: translateX(0px);
+    }
+
+   
+
+    100% {
+        opacity: 1;
+   
+    }
+}
+
+
+
+.logo {
+    animation: entradaLogo 1.2s ease-in-out;
+    position: relative;
+}
+
+
+
+h2 {
+    animation: entradaEntradetes 3s ease-in 3.5s both;
+}
+
+.img-article img { 
+    
+    transition: all 0.5s ease;
+
+}    
+
+.img-article img:hover { 
+    transform: scale(1.2);
+    opacity: 0.6;
+}
+
+
+
+nav ul li:nth-child(2) a {
+
+    animation: entradaMenu 1.2s ease-in 0.6s both;
+}
+
+nav ul li:nth-child(3) a {
+    animation: entradaMenu 1.2s ease-in 1s both;
+}
+
+nav ul li:nth-child(4) a {
+    animation: entradaMenu 1.2s ease-in 1.4s both;
+}
+
+nav ul li:nth-child(5) a {
+    animation: entradaMenu 1.2s ease-in 1.6s both;
+}
+
+nav ul li:last-child a {
+    animation: entradaMenu 1.2s ease-in 2s both;
+}
+
+.xs ul li {
+    animation:  entradaXs 1.2s ease-in 2s both;
+}
+
+
 /* *** ADAPTACIÓ RESPONSIVE --- MEDIA QUERIES *** */
 
 /* Versió tauleta (portrait + landscape): */
@@ -283,6 +442,75 @@ h2 {
 /* Versió mòbil: */
 
 @media only screen and (max-width: 600px) {
+
+/* Animacions adaptades: */
+
+    @keyframes entradaLogo {
+        0% {
+            opacity: 0;
+            top: -120px;
+            left: 10px;
+        }
+
+        50% {
+            opacity: 0.7;
+            transform: scale(1.8, 1.8);
+            top: 0px;
+            left: 155px;
+        }
+
+        100% {
+            opacity: 1;
+            left: 0px;
+            top: 0px;
+        }
+    }
+
+    @keyframes entradaBurger {
+        0% {
+            opacity: 0;
+            top: -120px;
+            left: 10px;
+        }
+
+        50% {
+            opacity: 0.7;
+            transform: scale(1.8, 1.8);
+            top: 0px;
+            left: 155px;
+        }
+
+        100% {
+            opacity: 1;
+            left: 0px;
+            top: 0px;
+        }
+    }
+
+    .logo {
+        animation: entradaLogo 1.2s ease-in-out;
+        position: relative;
+    }
+
+
+    .burger {
+
+        animation: entradaBurger 0.8s ease-in 0.6s both;
+    }
+
+    .xs ul li:first-child {
+        animation: entradaBurger 0.8s ease-in 0.8s both;
+    }
+
+    .xs ul li:last-child {
+        animation: entradaBurger 0.8s ease-in 1s both;
+    }
+
+
+h1 {
+animation: entradaTitol 2s ease-in-out 2s both;
+}
+
 
     .header {
         height: 28rem;
@@ -366,3 +594,4 @@ h2 {
     }
 
 }
+

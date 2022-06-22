@@ -1,0 +1,188 @@
+/*  --- GENERAL ---  */
+
+html { 
+    box-sizing: border-box;
+    font-size: 17px;
+}
+    
+*, *:before, *:after { 
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;    
+}
+
+/* Colors */
+
+.negre {
+    background-color: black;
+}
+
+.blau-fosc {
+    background-color: #2D4059;
+}
+
+.tomato {
+    background-color: #EA5455;
+}
+
+.taronja {
+    background-color: #F07B3F;
+}
+
+.groc {
+    background-color: #FED460;
+}
+
+.negre-groc {
+    background-color: #FEE228
+}
+
+.violeta {
+    background-color: #09506F;
+}
+
+.blau {
+    background-color: #62959C;
+}
+
+.blau-clar {
+    background-color: #A3DDCB;
+}
+
+.taronja-magenta {
+    background-color: #FD7B54;
+}
+
+.groc-clar {
+    background-color: #FDB36B;
+}
+
+.mostassa-ft {
+    background-color: #E6AF2E;
+} 
+
+/*  --- Maquetació Grid => versió mobile: ---  */
+
+.contenidor {
+    display: grid;
+    grid-template-rows: 3;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
+}
+
+header {
+    display: grid;
+    grid-template-rows: 2;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu {
+    display: grid;
+    grid-template: 1 / 3;
+    gap: 20px;
+    padding: 20px;
+}
+
+.banner {
+    display: grid;
+    grid-template: 1;
+    padding: 20px;
+}
+
+main {
+    display: grid;
+    grid-template: 2 / 1;
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    display: grid;
+    grid-template: 5 / 1;
+    gap: 20px;
+    padding: 20px;
+}
+
+aside {
+    display: grid;
+    grid-template-rows: 2;
+    gap: 10px;
+    padding: 20px;
+}
+
+footer {
+    display: grid;
+    grid-template: 1;
+    padding: 20px;
+}
+
+/* *** ADAPTACIÓ A ALTRES PANTALLES --- MEDIA QUERIES *** */
+
+/* Versió tablet (portrait): */
+@media only screen and (min-width: 600px) {
+
+    .negre-groc {
+        background-color: #FEFF03;
+    }
+
+    .violeta {
+        background-color: #4E4E6A;
+    }
+    
+    .blau {
+        background-color: #1F6CB0;
+    }
+    
+    .blau-clar {
+        background-color: #70A3C4;
+    }
+    
+    .taronja-magenta {
+        background-color: #F73F52;
+    }
+    
+    .groc-clar {
+        background-color: #FEEA85;
+    }
+  
+    header{
+        gap: 10px;
+    }
+
+    .menu {
+        grid-template-columns: 15% auto 15%;
+    }
+
+    section {
+        grid-template-rows: 3;
+        grid-template-columns: 1fr 1fr;    
+    }
+
+    .article-footer {
+        grid-column: span 2;
+    }
+}
+
+/* Versió desktop (i tablet landscape): */
+@media only screen and (min-width: 768px) {
+
+    .negre-groc {
+        background-color: #000;
+    }
+
+    main {
+        grid-template-columns: auto 30%;
+    }
+
+    aside {
+        align-content: start;
+    }
+    
+}
+

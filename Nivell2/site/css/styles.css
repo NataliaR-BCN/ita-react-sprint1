@@ -420,7 +420,7 @@ h2 {
 
 @media only screen and (max-width: 600px) {
 
-/* Nivell 3 - Exercici 6 => Animacions adaptades i regles CSS d'aquest Media Query: */
+/* Nivell 3 - Exercici 6 => Animacions adaptades + regles CSS d'aquest Media Query: */
 
     @keyframes entradaLogo {
         0% {

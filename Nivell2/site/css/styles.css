@@ -156,7 +156,7 @@ ul li {
 }
 
 .xs ul li {
-    animation:  entradaXs 1.2s ease-in 2s both;
+    animation: entradaXs 1.2s ease-in 2s both;
 }
 
 ul li a:link, ul li a:visited {

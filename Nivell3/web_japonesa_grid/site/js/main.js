@@ -12,3 +12,17 @@ function menuResponsive() {
     }
     
 }
+
+function sortimMobile() {
+    var foraMobile = window.matchMedia("(min-width: 601px)");
+
+    if(foraMobile.matches) {
+        document.getElementById("menuNavegacio").className = "menu-list";
+        document.getElementById("header").className = "header";
+    }
+  
+}
+
+   
+  
+
